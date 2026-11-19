@@ -61,9 +61,12 @@ TCP over the tailscale0 interface for communication.
 Known processor information:
 - Dia: 12th Gen Intel Core i5-1235U
 - Theresa: 12th Gen Intel Core i7-1255U
-- Jose: ARM64 VM; host CPU model to be documented
-  separately.
-
+- Jose: Apple M1 processor, 8 CPU cores
+  (4 performance and 4 efficiency).
+  MacBook Pro (MacBookPro17,1), 8 GB host RAM.
+  Ubuntu ARM64 VM running through Multipass
+  with 2 virtual CPUs and approximately
+  3.8 GiB of RAM.
 Jose's Ubuntu VM was created using Multipass.
 The hypervisor used by the other machines should
 be confirmed before final submission.
