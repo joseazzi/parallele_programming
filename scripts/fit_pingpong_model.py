@@ -169,3 +169,70 @@ print(
     "These are approximate empirical parameters. "
     "The model may not capture all MPI communication regimes."
 )
+# Additional plots: separate local and cross-machine communication
+plot_groups = {
+    "local": {
+        "title": "MPI Ping-Pong: Local Communication",
+        "connections": [
+            "Jose local",
+            "Dia local",
+            "Theresa local",
+        ],
+    },
+    "cross_machine": {
+        "title": "MPI Ping-Pong: Cross-Machine Communication",
+        "connections": [
+            "Jose - Dia",
+            "Jose - Theresa",
+            "Dia - Theresa",
+        ],
+    },
+}
+
+for group_name, group in plot_groups.items():
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    for name in group["connections"]:
+        df = pd.read_csv(BASE / benchmarks[name])
+        df = df.sort_values("bytes")
+
+        sizes = df["bytes"].to_numpy(dtype=float)
+        times = df["one_way_seconds"].to_numpy(dtype=float)
+
+        row = summary.loc[summary["connection"] == name].iloc[0]
+
+        startup_s = row["startup_latency_ms"] / 1000
+        tw = row["transfer_seconds_per_byte"]
+
+        predicted = startup_s + sizes * tw
+
+        line, = ax.plot(
+            sizes / (1024**2),
+            times * 1000,
+            marker="o",
+            markersize=4,
+            label=f"{name} measured",
+        )
+
+        ax.plot(
+            sizes / (1024**2),
+            predicted * 1000,
+            linestyle="--",
+            color=line.get_color(),
+            label=f"{name} model",
+        )
+
+    ax.set_xlabel("Message size (MiB)")
+    ax.set_ylabel("Estimated one-way transfer time (ms)")
+    ax.set_title(group["title"])
+    ax.grid(True, alpha=0.3)
+    ax.legend(fontsize=8)
+
+    fig.tight_layout()
+    fig.savefig(
+        OUTPUT / f"communication_model_{group_name}.png",
+        dpi=200,
+    )
+    plt.close(fig)
+
+    print(f"Saved communication_model_{group_name}.png")
