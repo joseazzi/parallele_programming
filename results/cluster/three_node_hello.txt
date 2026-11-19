@@ -1,0 +1,3 @@
+Hello from rank 0 of 3 on heat-jose
+Hello from rank 1 of 3 on heat-dia
+Hello from rank 2 of 3 on heat-theresa
