@@ -331,6 +331,8 @@ Communication model results:
 - results/pingpong/communication_model.png
 - results/pingpong/communication_model_refined.csv
 - results/pingpong/communication_model_refined.png
+- results/pingpong/communication_model_local.png
+- results/pingpong/communication_model_cross_machine.png
 
 Initial comparison graphs:
 - plots/pingpong_latency.png
