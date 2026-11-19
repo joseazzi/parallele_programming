@@ -28,7 +28,7 @@ Jose's computer
 
 Dia's computer
     |
-    +-- heat-dia-1 (Ubuntu VM)
+    +-- heat-dia (Ubuntu VM)
          Tailscale: 100.115.31.27
 
 Theresa's computer
@@ -50,7 +50,7 @@ TCP over the tailscale0 interface for communication.
 
 | Specification | Jose | Dia | Theresa |
 |---|---|---|---|
-| Hostname | heat-jose | heat-dia-1 | heat-theresa |
+| Hostname | heat-jose | heat-dia | heat-theresa |
 | Ubuntu | 24.04.5 LTS | 24.04.5 LTS | 24.04.5 LTS |
 | Architecture | ARM64 | x86-64 | x86-64 |
 | Virtual CPUs | 2 | 2 | 2 |
@@ -194,13 +194,25 @@ Its purpose is to verify:
 - Remote process execution.
 - Communication across the cluster.
 
-Distributed MPI launching was successfully
-established during the project setup.
+Distributed MPI execution was successfully
+verified across all three Ubuntu VMs.
 
-The final submission should retain command
-output demonstrating that all three VMs
-participate in an MPI execution.
+The hostname test returned:
+- heat-jose
+- heat-dia
+- heat-theresa
 
+The MPI Hello World test confirmed:
+- Rank 0 of 3 on heat-jose
+- Rank 1 of 3 on heat-dia
+- Rank 2 of 3 on heat-theresa
+
+Verification evidence is stored in:
+- results/cluster/three_node_hostname.txt
+- results/cluster/three_node_hello.txt
+
+Both tests completed successfully using
+Open MPI over the Tailscale network.
 ## 8. Ping-Pong Benchmark Methodology
 
 The MPI ping-pong benchmark measures
