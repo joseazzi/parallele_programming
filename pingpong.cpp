@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    const int max_bytes = 1 * 1024 * 1024;
+    const int max_bytes = 16 * 1024 * 1024;
     std::vector<char> buffer(max_bytes, 'x');
 
     if (rank == 0) {
