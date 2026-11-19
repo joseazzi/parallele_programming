@@ -79,9 +79,9 @@ configured before distributed MPI execution.
 
 ## 4. Clone the Repository
 
-    git clone https://github.com/joseazzi/parallele_programming.git
+    git clone https://github.com/joseazzi/parallele_programming.git heat-mpi
 
-    cd parallele_programming
+    cd heat-mpi
 
 For distributed MPI execution, the repository
 and executable paths must be consistent across
