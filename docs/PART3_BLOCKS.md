@@ -71,3 +71,17 @@ contention, and each configuration was measured once.
 The theoretical model captures communication volume and
 message startup costs but does not fully capture local
 computation, scheduling, or synchronization overhead.
+
+## Final correctness verification
+
+MPI Blocks was compared with the serial solver using:
+
+- Case 2
+- N = 512
+- P = 8
+- r = 0.2
+- 100 time steps
+
+The output files were compared using cmp.
+
+Result: PASS — MPI Blocks output matched serial bit-for-bit.
