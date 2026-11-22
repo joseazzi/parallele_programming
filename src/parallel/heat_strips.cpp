@@ -22,6 +22,7 @@ int main(int argc, char** argv) {
         std::string test_case = "1";
         std::string decomp = "strips";
         std::string output;
+        bool debug = false;
 
         // Command-line arguments
         for (int k = 1; k < argc; k += 2) {
@@ -38,6 +39,7 @@ int main(int argc, char** argv) {
             else if (key == "--case") test_case = val;
             else if (key == "--out") output = val;
             else if (key == "--decomp") decomp = val;
+            else if (key == "--debug") debug = (std::stoi(val) == 1);
             else throw std::runtime_error("Unknown option");
         }
 
@@ -66,6 +68,7 @@ int main(int argc, char** argv) {
             double count = std::ceil(T / dt);
             if (count > std::numeric_limits<int>::max())
                 throw std::runtime_error("Too many steps");
+
             steps = static_cast<int>(count);
             dt = T / steps;
             r = dt / (h * h);
@@ -146,7 +149,59 @@ int main(int argc, char** argv) {
                 MPI_COMM_WORLD, MPI_STATUS_IGNORE
             );
 
+            // Record communication time before debug printing
             t_comm += MPI_Wtime() - begin;
+
+            // Debug: display local arrays including ghost rows
+            if (debug && N == 8 && step == 0) {
+
+                // Print ranks in order to keep output readable
+                for (int p = 0; p < P; ++p) {
+
+                    MPI_Barrier(MPI_COMM_WORLD);
+
+                    if (rank == p) {
+                        std::cout
+                            << "\n=== Rank " << rank
+                            << " after ghost exchange ===\n";
+
+                        std::cout
+                            << "Owned global rows: "
+                            << first_row << " to "
+                            << first_row + local_rows - 1
+                            << "\n";
+
+                        for (int j = 0; j < local_rows + 2; ++j) {
+
+                            std::cout << "Local row " << j;
+
+                            if (j == 0)
+                                std::cout << " (TOP GHOST)";
+
+                            else if (j == local_rows + 1)
+                                std::cout << " (BOTTOM GHOST)";
+
+                            else
+                                std::cout << " (OWNED)";
+
+                            std::cout << ": ";
+
+                            for (int i = 0; i <= N; ++i) {
+                                std::cout
+                                    << std::fixed
+                                    << std::setprecision(2)
+                                    << u[idx(i,j)] << " ";
+                            }
+
+                            std::cout << "\n";
+                        }
+
+                        std::cout << std::flush;
+                    }
+                }
+
+                MPI_Barrier(MPI_COMM_WORLD);
+            }
 
             // Compute local temperatures
             begin = MPI_Wtime();
@@ -175,8 +230,10 @@ int main(int argc, char** argv) {
 
         MPI_Reduce(&elapsed, &max_total, 1, MPI_DOUBLE,
                    MPI_MAX, 0, MPI_COMM_WORLD);
+
         MPI_Reduce(&t_comm, &max_comm, 1, MPI_DOUBLE,
                    MPI_MAX, 0, MPI_COMM_WORLD);
+
         MPI_Reduce(&t_comp, &max_comp, 1, MPI_DOUBLE,
                    MPI_MAX, 0, MPI_COMM_WORLD);
 
@@ -186,6 +243,7 @@ int main(int argc, char** argv) {
         for (int p = 0; p < P; ++p) {
             int rows = base + (p < remainder ? 1 : 0);
             int first = 1 + p * base + std::min(p, remainder);
+
             counts[p] = rows * W;
             displs[p] = (first - 1) * W;
         }
@@ -241,6 +299,7 @@ int main(int argc, char** argv) {
 
             if (!output.empty()) {
                 std::ofstream file(output, std::ios::binary);
+
                 if (!file)
                     throw std::runtime_error("Cannot open output");
 
