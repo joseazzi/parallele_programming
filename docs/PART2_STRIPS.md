@@ -977,6 +977,90 @@ L2 error:
 
 The results demonstrate that the MPI strip implementation reproduces the verified serial numerical solution for all tested local configurations.
 
-The remaining Part 2 requirement is distributed validation across Jose's, Dia's, and Theresa's Ubuntu virtual machines.
+The distributed validation was subsequently completed successfully.
+See Section 19 for the results.
 
-Part 2 must not be considered fully completed until that distributed validation has been performed successfully.
+---
+
+## 19. Distributed validation across three Ubuntu VMs
+
+Distributed validation was successfully completed using three
+Ubuntu virtual machines connected through Tailscale:
+
+- heat-jose
+- heat-dia
+- heat-theresa
+
+All machines used the same Git commit:
+
+`35c4b7e Add MPI strip ghost row debugging`
+
+### 19.1 MPI connectivity
+
+Open MPI successfully launched processes across all three machines.
+
+Both process-management and data communication were explicitly
+restricted to the Tailscale interface:
+
+- `oob_tcp_if_include tailscale0`
+- `btl_tcp_if_include tailscale0`
+
+### 19.2 Distributed heat simulation
+
+The strip decomposition solver successfully executed with:
+
+- Grid size: N=8
+- Test case: 2
+- Time steps: 1
+- Stability parameter: r=0.2
+- MPI processes: P=3
+- Decomposition: strips
+
+The distributed simulation completed successfully.
+
+### 19.3 Ghost-row debugging: P=2
+
+The debugging output was inspected across Jose and Dia.
+
+The output confirmed:
+
+- Rank 0 owned global rows 1 to 4.
+- Rank 1 owned global rows 5 to 7.
+- Physical boundary ghost rows contained the expected value 1.00.
+- Internal ghost rows were exchanged between neighboring ranks.
+
+The distributed binary output was compared against the serial reference.
+
+Result:
+
+`PASS: P=2 ghost-debug output matches serial exactly`
+
+### 19.4 Ghost-row debugging: P=3
+
+The debugging output was inspected across Jose, Dia and Theresa.
+
+The output confirmed:
+
+- Rank 0 owned global rows 1 to 3.
+- Rank 1 owned global rows 4 to 5.
+- Rank 2 owned global rows 6 to 7.
+- Internal ghost rows were exchanged between neighboring ranks.
+- Physical boundary ghost rows contained the expected value 1.00.
+
+The distributed binary output was compared against the serial reference.
+
+Result:
+
+`PASS: P=3 ghost-debug output matches serial exactly`
+
+### 19.5 Distributed validation conclusion
+
+Both P=2 and P=3 ghost-row debugging tests completed successfully.
+
+Both distributed output files were byte-for-byte identical to the
+serial reference for the same numerical parameters.
+
+The three-machine MPI execution was also successfully verified.
+
+The distributed validation requirement for Part 2 has therefore
+been completed.
