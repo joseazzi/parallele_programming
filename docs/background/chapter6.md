@@ -3,8 +3,8 @@
 Reference: `heat_numerics_background.pdf`, Chapter 6, PDF pages 22-25,
 printed pages 18-21.
 
-Mandatory tasks: 6.1, 6.2, 6.3, 6.4, 6.6, 6.7. Task 6.5 is optional and
-not included here.
+Mandatory tasks: 6.1, 6.2, 6.3, 6.4, 6.6, 6.7. The optional Task 6.5 is
+also solved.
 
 Notation: $s=\alpha\Delta t/\Delta x^2$ (1D), $r_x=\alpha\Delta t/\Delta x^2$,
 $r_y=\alpha\Delta t/\Delta y^2$, and $r=\alpha\Delta t/h^2$ when
@@ -213,6 +213,196 @@ norm. For this scheme, the two views agree exactly.
 - The overshoot creates new extrema, so the maximum principle fails. In
   Task 6.7, Case 1 values exceed the boundary maximum 1 after about 120
   steps ($\max|u|=1.09$).
+
+---
+
+## Task 6.5 - Eigenvalues of the discrete second derivative (optional)
+
+Reference: Section 6.5, PDF pages 24-25, printed pages 20-21.
+
+Setting: 1D, $x_i=i\Delta x$, $\Delta x=L/N$, with $u_0=u_N=0$. From Task
+5.1(a), the interior values $\mathbf u=(u_1,\dots,u_{N-1})^T$ satisfy
+$\mathbf u'=-A\mathbf u$ with
+
+$$
+(A\mathbf u)_i=\frac{\alpha}{\Delta x^2}\left(2u_i-u_{i+1}-u_{i-1}\right),
+\qquad
+A=\frac{\alpha}{\Delta x^2}
+\begin{bmatrix}
+2&-1&&\\
+-1&2&\ddots&\\
+&\ddots&\ddots&-1\\
+&&-1&2
+\end{bmatrix}\in\mathbb R^{(N-1)\times(N-1)} .
+$$
+
+$A$ is symmetric. It is the matrix of Section 4.4.
+
+### (a) Eigenvectors and eigenvalues
+
+Let $v_i=\sin(m\pi x_i/L)=\sin(i\,\phi)$ with $\phi=m\pi\Delta x/L=m\pi/N$,
+$m=1,\dots,N-1$.
+
+**Neighbour sum.** By $\sin(a+b)+\sin(a-b)=2\sin a\cos b$:
+
+$$
+v_{i+1}+v_{i-1}=\sin((i+1)\phi)+\sin((i-1)\phi)=2\cos\phi\,\sin(i\phi)=2\cos\phi\;v_i .
+$$
+
+**Ends of the vector.** The rows $i=1$ and $i=N-1$ of $A$ omit $u_0$ and
+$u_N$ (they are zero). The formula still holds there, because the sine
+vanishes at the walls: $v_0=\sin0=0$ and $v_N=\sin(m\pi)=0$. So the same
+expression is valid for every row $1\le i\le N-1$:
+
+$$
+(A\mathbf v)_i=\frac{\alpha}{\Delta x^2}\left(2-2\cos\phi\right)v_i
+=\frac{4\alpha}{\Delta x^2}\sin^2\frac{\phi}{2}\;v_i
+\qquad(1-\cos\phi=2\sin^2\tfrac\phi2).
+$$
+
+Hence $\mathbf v^{(m)}$ is an eigenvector (it is nonzero for
+$1\le m\le N-1$), with eigenvalue
+
+$$
+\boxed{\ \mu_m=\frac{4\alpha}{\Delta x^2}\sin^2\!\left(\frac{m\pi\Delta x}{2L}\right)
+=\frac{4\alpha}{\Delta x^2}\sin^2\!\left(\frac{m\pi}{2N}\right),\qquad m=1,\dots,N-1\ }
+$$
+
+These are $N-1$ distinct values, because $\sin^2$ is increasing on
+$(0,\pi/2)$. So they are all the eigenvalues of the
+$(N-1)\times(N-1)$ matrix $A$, and all of them are positive.
+
+**Numerical check** (`scripts/background/task_6_5.py`, run on
+`heat-theresa`). For every $m=1,\dots,N-1$ the script applies $A$ to
+$\mathbf v^{(m)}$ and measures $\max_i|(A\mathbf v)_i-\mu_mv_i|/\mu_m$:
+
+| N | worst relative residual over all m |
+|---:|---:|
+| 10 | 2.5e-15 |
+| 40 | 1.3e-13 |
+| 160 | 2.2e-12 |
+
+These are round-off level, which confirms the eigenpairs.
+
+### (b) Largest eigenvalue
+
+$\sin^2(m\pi/2N)$ is largest for $m=N-1$:
+
+$$
+\mu_{\max}=\frac{4\alpha}{\Delta x^2}\sin^2\!\left(\frac{(N-1)\pi}{2N}\right)
+=\frac{4\alpha}{\Delta x^2}\cos^2\!\left(\frac{\pi}{2N}\right)
+=\frac{4\alpha}{\Delta x^2}\cos^2\!\left(\frac{\pi\Delta x}{2L}\right).
+$$
+
+Since $\cos^2(\pi\Delta x/2L)\to1$ as $\Delta x\to0$,
+
+$$
+\boxed{\ \mu_{\max}\sim\frac{4\alpha}{\Delta x^2}\ }
+\qquad\text{i.e. }\mu_{\max}\Delta x^2\to4\alpha:\ \text{it grows like }1/\Delta x^2 .
+$$
+
+Measured values ($\alpha=L=1$):
+
+| N | $\mu_{\max}$ | $\mu_{\max}\Delta x^2$ |
+|---:|---:|---:|
+| 10 | 3.902113e+02 | 3.902113 |
+| 40 | 6.390135e+03 | 3.993835 |
+| 160 | 1.023901e+05 | 3.999614 |
+| 640 | 1.638390e+06 | 3.999976 |
+
+Each time $N$ is multiplied by 4, $\mu_{\max}$ is multiplied by about 16.
+
+### (c) Forward Euler stability via Theorem 4.2
+
+Theorem 4.2 states that forward Euler on $\mathbf u'=-A\mathbf u$ is
+stable if and only if $\Delta t\le2/\mu_{\max}$:
+
+$$
+\Delta t\le\frac{2}{\mu_{\max}}=\frac{\Delta x^2}{2\alpha\cos^2(\pi\Delta x/2L)} .
+$$
+
+Since $\cos^2(\cdot)\le1$, the condition $\Delta t\le\frac{\Delta x^2}{2\alpha}$,
+i.e. $s=\alpha\Delta t/\Delta x^2\le\frac12$, guarantees stability for
+**every** $N$. As $\Delta x\to0$, the exact bound tends to exactly this
+value:
+
+| N | $2/\mu_{\max}$ | $\Delta x^2/(2\alpha)$ | largest stable $s$ |
+|---:|---:|---:|---:|
+| 10 | 5.125428e-03 | 5.000000e-03 | 0.512543 |
+| 40 | 3.129824e-04 | 3.125000e-04 | 0.500772 |
+| 160 | 1.953313e-05 | 1.953125e-05 | 0.500048 |
+| 640 | 1.220710e-06 | 1.220703e-06 | 0.500003 |
+
+**Comparison with Task 6.2.** Von Neumann gave $s\le\frac12$, the same
+condition. The two views agree even mode by mode. Forward Euler multiplies
+the coefficient of $\mathbf v^{(m)}$ by
+
+$$
+1-\mu_m\Delta t=1-4s\sin^2\!\left(\frac{m\pi}{2N}\right)=G(\theta_m),
+\qquad\theta_m=\frac{m\pi}{N},
+$$
+
+which is exactly the von Neumann factor $G(\theta)=1-4s\sin^2(\theta/2)$
+of Task 6.2, evaluated at the wavenumbers allowed by the Dirichlet
+boundaries. The slightly larger bound on a finite grid appears because the
+worst wavenumber $\theta=\pi$ (sawtooth) is not exactly available. The
+closest one is $\theta_{N-1}=\pi(N-1)/N$. This is the 1D version of the
+Remark in Task 6.3(c), and the 2D analogue was confirmed experimentally in
+Task 6.7.
+
+### (d) Small m: comparison with the exact decay rate
+
+In Section 1.8 (1D version), the mode $\sin(m\pi x/L)$ decays like
+$e^{-\lambda_mt}$ with $\lambda_m=\alpha(m\pi/L)^2$. For small
+$\phi=m\pi\Delta x/L$, use $\sin z=z-z^3/6+\dots$, so
+$\sin^2z=z^2-z^4/3+\dots$ with $z=\phi/2$:
+
+$$
+\mu_m=\frac{4\alpha}{\Delta x^2}\left[\frac{\phi^2}{4}-\frac{\phi^4}{48}+O(\phi^6)\right]
+=\alpha\left(\frac{m\pi}{L}\right)^2\left[1-\frac{1}{12}\left(\frac{m\pi\Delta x}{L}\right)^2+O(\Delta x^4)\right].
+$$
+
+$$
+\boxed{\ \frac{\mu_m}{\lambda_m}=1-\frac{(m\pi\Delta x/L)^2}{12}+O(\Delta x^4)\ }
+$$
+
+- For fixed $m$, $\mu_m\to\lambda_m$ with a relative error
+  $O(\Delta x^2)$. That is the second-order accuracy of $D_2$ found in
+  Task 3.2: the factor $\frac1{12}$ is the same $\frac{h^2}{12}f^{(4)}$
+  coefficient, since $f^{(4)}=(m\pi/L)^4f$ for this sine.
+- The semi-discrete system decays every smooth mode at almost the right
+  rate.
+- For large $m$ (comparable to $N$), the agreement breaks down. The grid
+  cannot resolve modes with only a few points per wavelength. The highest
+  mode has $\mu_{N-1}/\lambda_{N-1}\to4/\pi^2\approx0.405$. The discrete
+  operator damps it too slowly, but it is also the mode that limits
+  $\Delta t$ (part c).
+
+Measured with $N=40$:
+
+| m | $\mu_m$ | exact $\alpha(m\pi)^2$ | $\mu_m/\lambda_m$ | $1-(m\pi\Delta x)^2/12$ |
+|---:|---:|---:|---:|---:|
+| 1 | 9.864532 | 9.869604 | 0.999486 | 0.999486 |
+| 2 | 39.397310 | 39.478418 | 0.997946 | 0.997944 |
+| 3 | 88.416255 | 88.826440 | 0.995382 | 0.995374 |
+| 5 | 243.585496 | 246.740110 | 0.987215 | 0.987149 |
+| 10 | 937.258300 | 986.960440 | 0.949641 | 0.948596 |
+| 20 | 3200.000000 | 3947.841760 | 0.810569 | 0.794383 |
+| 30 | 5462.741700 | 8882.643961 | 0.614991 | 0.537362 |
+| 39 | 6390.135468 | 15011.668294 | 0.425678 | 0.218142 |
+
+For small $m$, the two-term formula matches the computed ratio to 4-6
+digits. For $m$ near $N$, it no longer does, and $\mu_m$ falls well below
+$\lambda_m$.
+
+**Stiffness.**
+$\mu_{\max}/\mu_{\min}=\cot^2(\pi/2N)\approx4N^2/\pi^2$, which is 648 for
+$N=40$. The smooth mode $m=1$ carries the physics, while the
+almost-unresolved mode $m=N-1$ dictates the time step. This is exactly the
+stiff situation described after Theorem 4.2, and the reason the explicit
+scheme needs $\Delta t=O(\Delta x^2)$.
+
+Files: `scripts/background/task_6_5.py`, `results/background/task_6_5.csv`.
 
 ---
 
@@ -455,5 +645,6 @@ checkerboard pattern.
 | 6.2 | $G=1-4s\sin^2(\theta/2)$, worst $\theta=\pi$ (sawtooth), $\Delta t\le\Delta x^2/(2\alpha)$ |
 | 6.3 | $G=1-4r_x\sin^2\frac\theta2-4r_y\sin^2\frac\varphi2$, worst $(\pi,\pi)$ checkerboard, $r_x+r_y\le\frac12$; $r\le\frac14$; 3D $r\le\frac16$ |
 | 6.4 | $w_0=1-4r\ge0\iff r\le\frac14$, same as von Neumann; $w_0<0$ gives overshoot and a broken maximum principle |
+| 6.5 (optional) | $\mu_m=\frac{4\alpha}{\Delta x^2}\sin^2\frac{m\pi}{2N}$, $\mu_{\max}\sim4\alpha/\Delta x^2$, $\Delta t\le2/\mu_{\max}\Rightarrow s\le\frac12$ (same as 6.2), $\mu_m/\lambda_m=1-(m\pi\Delta x/L)^2/12$ |
 | 6.6 | $0.4N^2$ steps, $\approx2.4N^4$ flops, ×16 per doubling; 40 min ($N=1000$), 7.1 days ($N=4000$) at $10^9$ flop/s |
 | 6.7 | $r=0.2625$: checkerboard first near the corners (Case 1) or at the centre (Case V), measured growth 1.09676 against theoretical 1.096763 |
