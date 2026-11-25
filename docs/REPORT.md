@@ -407,15 +407,10 @@ Each of us provided and maintained one cluster node:
 - **Dia Hajjar:** heat-dia-1 (Hyper-V on Windows).
 - **Theresa Kozah:** heat-theresa (VirtualBox on Windows).
 
-The author names in the Git history show whose machine or account
-was used to commit, not who did the work. For example:
-
-- Most commits were pushed from Jose's VM, and the background-notes
-  solutions from Theresa's.
-- Dia pushed the Dia–Theresa ping-pong results from her own VM.
-- Measurements made on Dia's VM were committed from Jose's or
-  Theresa's accounts: the Dia-local ping-pong, the 16 MiB Dia–Theresa
-  benchmark, and the Part 4 serial baseline.
+We worked on all three machines together, so the work was never
+split by machine. The author names in the Git history only show which
+VM's Git account was logged in when a commit was made, not who did
+the work.
 
 **Use of LLMs:** ChatGPT and Claude Code were used throughout. The
 complete conversation logs are submitted separately, as required by
