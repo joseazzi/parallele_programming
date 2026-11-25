@@ -395,27 +395,22 @@ VirtualBox do not pass one through, and the Mac host has no NVIDIA GPU.
 
 ## (f) Contributions
 
-*Based on the commit history. The team should confirm or adjust.*
+The three of us worked on every part of the project **together, in
+joint sessions**. All three were present when we designed, coded,
+debugged, measured and wrote. Every team member is therefore familiar
+with, and responsible for, all of the code, the results and this
+report.
 
-- **Jose Azzi:**
-  - Set up the cluster: Tailscale network, SSH, hostfile,
-    hello-world, and the Multipass VM on the Mac.
-  - Wrote the ping-pong program and the communication model.
-  - Wrote the serial solver and the convergence and stability
-    studies.
-  - Implemented and validated the strip and block decompositions.
-  - Ran the Part 4 performance campaign and analysis.
-  - Maintained the repository.
-- **Theresa Kozah:**
-  - Wrote the solutions to all background-notes Tasks (chapters 1–8,
-    including the optional Task 6.5), with their scripts and figures.
-  - Added the deliberately unstable solver (`heat_unstable`).
-  - Ran the Theresa-local and Dia–Theresa ping-pong benchmarks.
-  - Provided the third cluster node.
-- **Dia Hajjar:**
-  - Provided and configured the second cluster node.
-  - Ran the Dia–Theresa ping-pong benchmark.
-  - Took part in the distributed tests.
+Each of us provided and maintained one cluster node:
+
+- **Jose Azzi:** heat-jose (Multipass on an Apple M1 MacBook Pro).
+- **Dia Hajjar:** heat-dia-1 (Hyper-V on Windows).
+- **Theresa Kozah:** heat-theresa (VirtualBox on Windows).
+
+The author names in the Git history show whose machine or account
+was used to commit, not who did the work. For example, most commits
+were pushed from Jose's VM, and the background-notes solutions from
+Theresa's.
 
 **Use of LLMs:** ChatGPT and Claude Code were used throughout. The
 complete conversation logs are submitted separately, as required by
