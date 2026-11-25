@@ -34,20 +34,34 @@ u(x+a,y+b)=u+r\cos\phi\,u_x
 +O(r^3)
 $$
 
-The required integrals over [0, 2pi] are:
+The required integrals over $[0,2\pi]$ are:
 
-- Integral of 1 = 2pi
-- Integral of cos(phi) = 0
-- Integral of sin(phi) = 0
-- Integral of cos(phi)sin(phi) = 0
-- Integral of cos(phi) = pi
-- Integral of sin(phi) = pi
+$$
+\int_0^{2\pi}1\,d\phi=2\pi,\qquad
+\int_0^{2\pi}\cos\phi\,d\phi=\int_0^{2\pi}\sin\phi\,d\phi=0,\qquad
+\int_0^{2\pi}\cos\phi\sin\phi\,d\phi=0,
+$$
 
-For a sufficiently smooth function, all third-order
-Taylor terms also integrate to zero by symmetry.
-The remaining error is therefore O(r^4).
+$$
+\int_0^{2\pi}\cos^2\phi\,d\phi=\int_0^{2\pi}\sin^2\phi\,d\phi=\pi .
+$$
 
-Integrating and dividing by 2pi gives:
+Integrating the expansion term by term (the derivatives of $u$ are
+evaluated at the fixed point $(x,y)$, so they come out of the integral):
+
+$$
+\int_0^{2\pi}u(x+a,y+b)\,d\phi
+=2\pi\,u+0\cdot u_x+0\cdot u_y
++\frac{r^2}{2}\pi\,u_{xx}+0\cdot u_{xy}+\frac{r^2}{2}\pi\,u_{yy}
++\int_0^{2\pi}O(r^3)\,d\phi .
+$$
+
+The third-order terms are $\frac{r^3}{6}$ times combinations of
+$\cos^3\phi$, $\cos^2\phi\sin\phi$, $\cos\phi\sin^2\phi$ and $\sin^3\phi$.
+All of these are odd under $\phi\mapsto\phi+\pi$, so they integrate to
+zero. The first surviving remainder is therefore of order $r^4$.
+
+Dividing by $2\pi$ gives:
 
 $$
 \frac{1}{2\pi}\int_0^{2\pi}
@@ -136,8 +150,24 @@ $$
 \boxed{\tau=\frac{L^2}{\alpha}}
 $$
 
-Any characteristic diffusion time determined only
-by L and alpha must be proportional to this quantity.
+**Why any spreading time must be proportional to τ.**
+Let $t^*$ be the time heat needs to spread across the distance $L$
+(for example, until the centre reaches half of the edge temperature).
+In the heat equation, the material enters only through $\alpha$ and the
+geometry only through $L$, so $t^*$ can depend only on $\alpha$, $L$,
+and dimensionless numbers such as the "half" criterion or the plate's
+aspect ratio. By part (a), the only dimensionless group containing time
+is $\alpha t^*/L^2$, so it must equal a pure number $C$:
+
+$$
+\frac{\alpha t^*}{L^2}=C
+\quad\Longrightarrow\quad
+t^*=C\,\frac{L^2}{\alpha}=C\,\tau .
+$$
+
+The constant $C$ depends on the precise criterion, but not on the
+material or the size. In particular, doubling the size of the plate
+quadruples the time.
 
 For both plates:
 

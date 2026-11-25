@@ -40,10 +40,16 @@ panels = [("1", 0.2, 200, "Case 1, r=0.2 (stable), 200 steps"),
           ("V", 0.2625, 200, "Case V, r=0.2625, 200 steps"),
           ("V", 0.2625, 400, "Case V, r=0.2625, 400 steps"),
           ("V", 0.2625, 600, "Case V, r=0.2625, 600 steps")]
-fig, axes = plt.subplots(2, 7, figsize=(24, 7.4))
+# portrait 4x4 layout (fits an A4 page): rows 1-2 = Case 1 (u, c), rows 3-4 = Case V (u, c)
+fig, grid = plt.subplots(4, 4, figsize=(15, 15.5))
+slots = [(0, 0), (0, 1), (0, 2), (0, 3), (2, 0), (2, 1), (2, 2)]
+grid[2, 3].axis("off")
+grid[3, 3].axis("off")
 for k, (case, r, s, title) in enumerate(panels):
     u = field(case, r, s)
     c = checker(u)
+    row, col = slots[k]
+    axes = {(0, k): grid[row, col], (1, k): grid[row + 1, col]}
     a = axes[0, k]
     m = max(abs(u).max(), 1e-12)
     im = a.imshow(u, origin="lower", cmap="RdBu_r", vmin=-m, vmax=m)
@@ -59,11 +65,11 @@ for k, (case, r, s, title) in enumerate(panels):
     a.set_title(f"checkerboard indicator c = (4u - nbrs)/8\nmax|c| = {mc:.3g} at (i,j)=({i0},{j0})",
                 fontsize=8.5)
     fig.colorbar(im, ax=a, fraction=0.046)
-for a in axes.ravel():
+for a in grid.ravel():
     a.set_xlabel("i", fontsize=8)
     a.set_ylabel("j", fontsize=8)
-fig.suptitle("Task 6.7: explicit scheme on N = 40 with r = 0.2625 (5% above 1/4). "
-             "Red/blue = sign; the unstable field alternates sign from node to node", fontsize=11)
+fig.suptitle("Task 6.7: explicit scheme on N = 40 with r = 0.2625 (5% above 1/4)\n"
+             "Red/blue = sign; the unstable field alternates sign from node to node", fontsize=13)
 fig.tight_layout()
 fig.savefig(P / "task_6_7_snapshots.png", dpi=110)
 

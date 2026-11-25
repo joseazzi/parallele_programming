@@ -381,8 +381,10 @@ physical temperatures lie in $[0,1]$.
 
 ![Task 6.7 snapshots](../../plots/background/task_6_7_snapshots.png)
 
-Top row: the field $u$. Bottom row: the indicator $c$ on a signed log
-scale, with + marking the maximum of $|c|$.
+Rows 1-2: Case 1 (stable reference, then $r=0.2625$ after 100, 200 and
+300 steps). Rows 3-4: Case V ($r=0.2625$ after 200, 400 and 600 steps).
+Rows 1 and 3 show the field $u$. Rows 2 and 4 show the indicator $c$
+on a signed log scale, with + marking the maximum of $|c|$.
 
 ![Task 6.7 growth](../../plots/background/task_6_7_growth.png)
 
