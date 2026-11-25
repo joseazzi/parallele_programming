@@ -339,9 +339,10 @@ assignment parts are completed.
   final validation in progress.
 - Part 3: MPI block solver implemented;
   final validation pending.
-- Part 4: Strong-scaling study completed
-  (see docs/PART4_PERFORMANCE.md); P=6 not
-  measurable over Tailscale.
+- Part 4: Performance study completed
+  (baseline, strong and weak scaling, model;
+  see docs/PART4_PERFORMANCE.md). P <= 5;
+  N = 8192 and P = 6 documented as skipped.
 
 The repository will continue to be updated
 as experiments and verification are completed.

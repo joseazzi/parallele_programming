@@ -1,0 +1,48 @@
+N=512 placement=node P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.693288126 t_comp=0.005310236 t_comm=1.690396345
+N=512 placement=node P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.751926284 t_comp=0.004473075 t_comm=1.748481876
+N=512 placement=node P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.749684219 t_comp=0.004747797 t_comm=1.746815773
+N=512 placement=node P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.773467526 t_comp=0.004613528 t_comm=1.770583746
+N=512 placement=node P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.947799153 t_comp=0.00676954 t_comm=1.944732171
+N=512 placement=node P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.76349648 t_comp=0.004847396 t_comm=1.760413207
+N=512 placement=node P=3 mode=strips run=1
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.224407581 t_comp=0.00320831 t_comm=2.221363047
+N=512 placement=node P=3 mode=strips run=2
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.19070567 t_comp=0.00453095 t_comm=2.187525327
+N=512 placement=node P=3 mode=strips run=3
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.165275233 t_comp=0.003211819 t_comm=2.162050004
+N=512 placement=node P=3 mode=blocks run=1
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.824473802 t_comp=0.003440566 t_comm=1.823132321
+N=512 placement=node P=3 mode=blocks run=2
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.893884768 t_comp=0.004644065 t_comm=1.890903569
+N=512 placement=node P=3 mode=blocks run=3
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.102075719 t_comp=0.003109583 t_comm=2.098954095
+N=512 placement=node P=4 mode=strips run=1
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.150360876 t_comp=0.002031947 t_comm=2.149075223
+N=512 placement=node P=4 mode=strips run=2
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.073716874 t_comp=0.002432406 t_comm=2.072617003
+N=512 placement=node P=4 mode=strips run=3
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.026194708 t_comp=0.002215086 t_comm=2.024320161
+N=512 placement=node P=4 mode=blocks run=1
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=3.434419686 t_comp=0.002425883 t_comm=3.433142608
+N=512 placement=node P=4 mode=blocks run=2
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=3.705233255 t_comp=0.002280633 t_comm=3.70365811
+N=512 placement=node P=4 mode=blocks run=3
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=3.581504935 t_comp=0.002203531 t_comm=3.579829703
+N=512 placement=node P=5 mode=strips run=1
+decomp=strips case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.273909831 t_comp=0.001668788 t_comm=2.272459802
+N=512 placement=node P=5 mode=strips run=2
+decomp=strips case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.123449725 t_comp=0.002118857 t_comm=2.12239489
+N=512 placement=node P=5 mode=strips run=3
+decomp=strips case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.962885037 t_comp=0.001938576 t_comm=2.961469755
+N=512 placement=node P=5 mode=blocks run=1
+decomp=blocks case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.162467565 t_comp=0.001978376 t_comm=2.161042576
+N=512 placement=node P=5 mode=blocks run=2
+decomp=blocks case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.08044371 t_comp=0.002007694 t_comm=2.079492454
+N=512 placement=node P=5 mode=blocks run=3
+decomp=blocks case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.833419303 t_comp=0.003718279 t_comm=2.831966521

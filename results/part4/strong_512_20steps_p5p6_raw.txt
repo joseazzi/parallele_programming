@@ -1,0 +1,30 @@
+N=512 placement=slot P=5 mode=blocks run=2
+decomp=blocks case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=9.283258767 t_comp=0.005438683 t_comm=9.27780222
+N=512 placement=slot P=5 mode=blocks run=3
+decomp=blocks case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=5.191807167 t_comp=0.002893585 t_comm=5.188884428
+N=512 placement=slot P=6 mode=strips run=1
+decomp=strips case=2 P=6 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.491694634 t_comp=0.002481336 t_comm=2.489654329
+N=512 placement=slot P=6 mode=strips run=2
+--------------------------------------------------------------------------
+WARNING: Open MPI failed to TCP connect to a peer MPI process.  This
+should not happen.
+
+Your Open MPI job may now hang or fail.
+
+  Local host: heat-dia
+  PID:        39251
+  Message:    connect() to 100.125.52.39:1028 failed
+  Error:      Operation now in progress (115)
+--------------------------------------------------------------------------
+FAILED: exit=137
+N=512 placement=slot P=6 mode=strips run=3
+decomp=strips case=2 P=6 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=7.199849945 t_comp=0.004276283 t_comm=7.19836046
+N=512 placement=slot P=6 mode=blocks run=1
+[heat-theresa:43098] oob:tcp: send_msg: write failed: Broken pipe (32) [sd = 15]
+[heat-theresa:43098] [[62290,0],2]-[[62290,0],0] mca_oob_tcp_peer_send_handler: unable to send message ON SOCKET 15
+FAILED: exit=137
+N=512 placement=slot P=6 mode=blocks run=2
+decomp=blocks case=2 P=6 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.838069995 t_comp=0.002006583 t_comm=2.836183603
+N=512 placement=slot P=6 mode=blocks run=3
+decomp=blocks case=2 P=6 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=3.062423616 t_comp=0.00229452 t_comm=3.06162071
+DONE

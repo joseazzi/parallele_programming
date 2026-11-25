@@ -1,0 +1,9 @@
+network,mode,placement,crossover_N_P5_faster_than_P1,model_S5_N512,model_S5_N2048,model_S5_N8192
+tailscale_measured,strips,slot,65536,0.002,0.021,0.171
+tailscale_measured,strips,node,65536,0.002,0.021,0.171
+tailscale_measured,blocks,slot,65536,0.002,0.021,0.171
+tailscale_measured,blocks,node,65536,0.002,0.021,0.171
+real_cluster_ts_1us,strips,slot,128,2.807,1.389,2.170
+real_cluster_ts_1us,strips,node,128,2.807,1.391,2.172
+real_cluster_ts_1us,blocks,slot,128,2.807,1.389,2.170
+real_cluster_ts_1us,blocks,node,128,2.807,1.391,2.172

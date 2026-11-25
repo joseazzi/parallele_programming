@@ -1,0 +1,60 @@
+N=2048 placement=slot P=1 mode=strips run=1
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.060974365 t_comp=0.060955616 t_comm=1.0542e-05
+N=2048 placement=slot P=1 mode=strips run=2
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.064814451 t_comp=0.064778036 t_comm=1.2209e-05
+N=2048 placement=slot P=1 mode=strips run=3
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.062884323 t_comp=0.062821614 t_comm=1.0998e-05
+N=2048 placement=slot P=1 mode=blocks run=1
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.068096362 t_comp=0.068063071 t_comm=2.3209e-05
+N=2048 placement=slot P=1 mode=blocks run=2
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.065943281 t_comp=0.065906366 t_comm=2.5457e-05
+N=2048 placement=slot P=1 mode=blocks run=3
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.064618379 t_comp=0.064586633 t_comm=2.0417e-05
+N=2048 placement=slot P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.039563198 t_comp=0.037839594 t_comm=0.002428627
+N=2048 placement=slot P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.040611753 t_comp=0.038795398 t_comm=0.002206468
+N=2048 placement=slot P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.043836485 t_comp=0.041756348 t_comm=0.002202926
+N=2048 placement=slot P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.053383339 t_comp=0.05093505 t_comm=0.004630931
+N=2048 placement=slot P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.034642597 t_comp=0.032906115 t_comm=0.002119847
+N=2048 placement=slot P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.035014382 t_comp=0.033361434 t_comm=0.002143174
+N=2048 placement=slot P=3 mode=strips run=1
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.44535575 t_comp=0.054598564 t_comm=2.422616874
+N=2048 placement=slot P=3 mode=strips run=2
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.304861182 t_comp=0.054169756 t_comm=2.283192924
+N=2048 placement=slot P=3 mode=strips run=3
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.292504376 t_comp=0.056199456 t_comm=2.270971016
+N=2048 placement=slot P=3 mode=blocks run=1
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.217164325 t_comp=0.053290119 t_comm=2.195505125
+N=2048 placement=slot P=3 mode=blocks run=2
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.336132283 t_comp=0.052330986 t_comm=2.314501073
+N=2048 placement=slot P=3 mode=blocks run=3
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.392450947 t_comp=0.054196377 t_comm=2.371195541
+N=2048 placement=slot P=4 mode=strips run=1
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.551670909 t_comp=0.039363059 t_comm=2.535218349
+N=2048 placement=slot P=4 mode=strips run=2
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.551968442 t_comp=0.04256645 t_comm=2.534623516
+N=2048 placement=slot P=4 mode=strips run=3
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.466432612 t_comp=0.039101948 t_comm=2.449700324
+N=2048 placement=slot P=4 mode=blocks run=1
+decomp=blocks case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.282551395 t_comp=0.069449474 t_comm=2.265624272
+N=2048 placement=slot P=4 mode=blocks run=2
+decomp=blocks case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.039797375 t_comp=0.068748176 t_comm=2.022526208
+N=2048 placement=slot P=4 mode=blocks run=3
+decomp=blocks case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.061144686 t_comp=0.073667817 t_comm=2.043069611
+N=2048 placement=slot P=5 mode=strips run=1
+decomp=strips case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.644088558 t_comp=0.031938836 t_comm=2.612129875
+N=2048 placement=slot P=5 mode=strips run=2
+decomp=strips case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.871763732 t_comp=0.033973917 t_comm=2.858474102
+N=2048 placement=slot P=5 mode=strips run=3
+decomp=strips case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.618586156 t_comp=0.03225084 t_comm=2.587337479
+N=2048 placement=slot P=5 mode=blocks run=1
+decomp=blocks case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.414962515 t_comp=0.037429392 t_comm=2.401934323
+N=2048 placement=slot P=5 mode=blocks run=2
+decomp=blocks case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.694783449 t_comp=0.034901827 t_comm=2.662322925
+N=2048 placement=slot P=5 mode=blocks run=3
+decomp=blocks case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.447121837 t_comp=0.033344792 t_comm=2.416025007

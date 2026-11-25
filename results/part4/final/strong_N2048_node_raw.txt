@@ -1,0 +1,50 @@
+N=2048 placement=node P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.139832694 t_comp=0.076741353 t_comm=2.107297066
+N=2048 placement=node P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.384804391 t_comp=0.07553837 t_comm=2.352964906
+N=2048 placement=node P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.110143015 t_comp=0.076134699 t_comm=2.078372385
+N=2048 placement=node P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.18977015 t_comp=0.077525879 t_comm=2.152788196
+N=2048 placement=node P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.145881816 t_comp=0.077711312 t_comm=2.113403176
+N=2048 placement=node P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.091167944 t_comp=0.073529471 t_comm=2.057976604
+N=2048 placement=node P=3 mode=strips run=1
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.918447686 t_comp=0.048836622 t_comm=2.869591866
+N=2048 placement=node P=3 mode=strips run=2
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.523292248 t_comp=0.049489501 t_comm=2.473785928
+N=2048 placement=node P=3 mode=strips run=3
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.778765813 t_comp=0.052003596 t_comm=2.72674179
+N=2048 placement=node P=3 mode=blocks run=1
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.540056942 t_comp=0.050291812 t_comm=2.489747302
+N=2048 placement=node P=3 mode=blocks run=2
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=3.028095767 t_comp=0.052424229 t_comm=2.975648571
+N=2048 placement=node P=3 mode=blocks run=3
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.781720912 t_comp=0.052136353 t_comm=2.729564877
+N=2048 placement=node P=4 mode=strips run=1
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.955021527 t_comp=0.03789684 t_comm=2.920107855
+N=2048 placement=node P=4 mode=strips run=2
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=3.791948382 t_comp=0.03859592 t_comm=3.775338125
+N=2048 placement=node P=4 mode=strips run=3
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.617994836 t_comp=0.039435912 t_comm=2.588022511
+N=2048 placement=node P=4 mode=blocks run=1
+decomp=blocks case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=3.922190334 t_comp=0.044916699 t_comm=3.906518561
+N=2048 placement=node P=4 mode=blocks run=2
+decomp=blocks case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=3.930095593 t_comp=0.056335446 t_comm=3.914168987
+N=2048 placement=node P=4 mode=blocks run=3
+decomp=blocks case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=3.739739934 t_comp=0.040074727 t_comm=3.722319679
+N=2048 placement=node P=5 mode=strips run=1
+decomp=strips case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.718927442 t_comp=0.034010783 t_comm=2.705192372
+N=2048 placement=node P=5 mode=strips run=2
+decomp=strips case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.487220117 t_comp=0.032871875 t_comm=2.47382946
+N=2048 placement=node P=5 mode=strips run=3
+FAILED: exit=137
+N=2048 placement=node P=5 mode=strips run=3
+decomp=strips case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=6.6459538 t_comp=0.035258344 t_comm=6.614357444
+N=2048 placement=node P=5 mode=blocks run=1
+decomp=blocks case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=5.976772926 t_comp=0.041309168 t_comm=5.944917597
+N=2048 placement=node P=5 mode=blocks run=2
+decomp=blocks case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=3.119349592 t_comp=0.030769862 t_comm=3.095843833
+N=2048 placement=node P=5 mode=blocks run=3
+decomp=blocks case=2 P=5 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=3.225227753 t_comp=0.031314453 t_comm=3.212250848
