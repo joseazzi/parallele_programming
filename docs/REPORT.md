@@ -188,6 +188,13 @@ isotropic Laplacian) would need them.
    (Jose + Dia) and P = 3 (Jose + Dia + Theresa) outputs were
    **identical to serial**, so the largest difference is 0.
 
+4. **Automated check** (`scripts/correctness_check.sh`, output in
+   `results/correctness/correctness_output.txt`):
+   - **One VM:** Cases 1, 2 and V; N = 8, 41, 100; P = 1–4; strips and
+     blocks. **72 of 72** outputs bit-for-bit identical to serial.
+   - **Across the three VMs** (`--map-by node`): Case 2; N = 41 and
+     100; P = 2 and 3. **8 of 8** identical.
+
 Details: `docs/PART2_STRIPS.md` and `docs/PART3_BLOCKS.md`.
 
 ---
@@ -426,6 +433,7 @@ make                                         # heat_serial, heat_strips, heat_bl
 mpirun --hostfile hosts.example -np 6 \
   --mca oob_tcp_if_include tailscale0 --mca btl_tcp_if_include tailscale0 --mca btl tcp,self \
   ./heat_blocks --case 2 --N 512 --r 0.2 --steps 500 --decomp blocks --out u.bin
+CLUSTER=1 bash scripts/correctness_check.sh  # serial vs strips vs blocks, cmp
 bash scripts/part4_final.sh                  # Part 4 measurement campaign
 python3 scripts/part4_analyze.py             # tables, model, figures
 ```
@@ -436,6 +444,6 @@ python3 scripts/part4_analyze.py             # tables, model, figures
 |---|---|
 | Cluster, ping-pong | `docs/PART0_CLUSTER.md`, `pingpong_*.csv`, `results/pingpong/` |
 | Serial, convergence, stability | `docs/PART1_SERIAL.md`, `results/convergence.csv`, `plots/convergence.png`, `plots/stability.png` |
-| Strips, blocks, correctness | `docs/PART2_STRIPS.md`, `docs/PART3_BLOCKS.md`, `results/cluster/` |
+| Strips, blocks, correctness | `docs/PART2_STRIPS.md`, `docs/PART3_BLOCKS.md`, `scripts/correctness_check.sh`, `results/correctness/`, `results/cluster/` |
 | Performance | `docs/PART4_PERFORMANCE.md`, `results/part4/`, `plots/part4_*.png` |
 | Background notes | `docs/background/chapter1–8.md`, `results/background/`, `plots/background/` |

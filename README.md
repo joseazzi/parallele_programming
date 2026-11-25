@@ -276,6 +276,17 @@ Both parallel implementations require numerical
 correctness validation against the serial solver
 before their final performance results are accepted.
 
+## Correctness check
+
+Runs serial, strips and blocks for several N and P and compares the
+output files bit-for-bit with `cmp`:
+
+    bash scripts/correctness_check.sh            # one VM
+    CLUSTER=1 bash scripts/correctness_check.sh  # plus the 3-VM cluster
+
+Latest output: `results/correctness/correctness_output.txt`
+(80 of 80 identical).
+
 ## 11. Results and Graphs
 
 The repository contains numerical and
