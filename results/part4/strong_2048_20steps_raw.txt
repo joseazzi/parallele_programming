@@ -1,0 +1,58 @@
+N=2048 placement=slot P=1 mode=strips run=1
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.06025747 t_comp=0.060231636 t_comm=1.4999e-05
+N=2048 placement=slot P=1 mode=strips run=2
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.062963083 t_comp=0.062940208 t_comm=1.4416e-05
+N=2048 placement=slot P=1 mode=strips run=3
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.066082707 t_comp=0.066061915 t_comm=1.0086e-05
+N=2048 placement=slot P=1 mode=blocks run=1
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.061097909 t_comp=0.061069952 t_comm=1.7376e-05
+N=2048 placement=slot P=1 mode=blocks run=2
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.061111244 t_comp=0.061072948 t_comm=1.6667e-05
+N=2048 placement=slot P=1 mode=blocks run=3
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.060818277 t_comp=0.060790942 t_comm=1.6921e-05
+N=2048 placement=slot P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.033998025 t_comp=0.032341852 t_comm=0.001662254
+N=2048 placement=slot P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.036658679 t_comp=0.035090015 t_comm=0.001678583
+N=2048 placement=slot P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.036851351 t_comp=0.035218519 t_comm=0.001738209
+N=2048 placement=slot P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.035795907 t_comp=0.033573224 t_comm=0.002220559
+N=2048 placement=slot P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.035573442 t_comp=0.033965069 t_comm=0.001598707
+N=2048 placement=slot P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.035416438 t_comp=0.033821941 t_comm=0.00162167
+N=2048 placement=slot P=3 mode=strips run=1
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.41943783 t_comp=0.070230845 t_comm=2.396495054
+N=2048 placement=slot P=3 mode=strips run=2
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.246899633 t_comp=0.089231756 t_comm=2.22403761
+N=2048 placement=slot P=3 mode=strips run=3
+decomp=strips case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.586967704 t_comp=0.059961945 t_comm=2.564168844
+N=2048 placement=slot P=3 mode=blocks run=1
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.349527015 t_comp=0.051797062 t_comm=2.327912973
+N=2048 placement=slot P=3 mode=blocks run=2
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.566619453 t_comp=0.057273454 t_comm=2.544228931
+N=2048 placement=slot P=3 mode=blocks run=3
+decomp=blocks case=2 P=3 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.189548474 t_comp=0.060196364 t_comm=2.16735408
+N=2048 placement=slot P=4 mode=strips run=1
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.315815865 t_comp=0.050012112 t_comm=2.299112368
+N=2048 placement=slot P=4 mode=strips run=2
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.176772345 t_comp=0.053291157 t_comm=2.160556608
+N=2048 placement=slot P=4 mode=strips run=3
+decomp=strips case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.233568215 t_comp=0.048632358 t_comm=2.217100678
+N=2048 placement=slot P=4 mode=blocks run=1
+decomp=blocks case=2 P=4 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=2.067424046 t_comp=0.099297977 t_comm=2.05079075
+N=2048 placement=slot P=4 mode=blocks run=2
+mpirun: Forwarding signal 18 to job
+--------------------------------------------------------------------------
+WARNING: Open MPI failed to TCP connect to a peer MPI process.  This
+should not happen.
+
+Your Open MPI job may now hang or fail.
+
+  Local host: heat-dia
+  PID:        37597
+  Message:    connect() to 100.125.52.39:1031 failed
+  Error:      Operation now in progress (115)
+--------------------------------------------------------------------------
+FAILED: exit=124

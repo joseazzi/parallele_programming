@@ -1,0 +1,10 @@
+N=512 placement=slot P=5 mode=strips run=1
+decomp=strips case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=4.723669679 t_comp=0.005854021 t_comm=4.721593857
+N=512 placement=slot P=5 mode=strips run=2
+decomp=strips case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=4.760968177 t_comp=0.003773175 t_comm=4.75935065
+N=512 placement=slot P=5 mode=strips run=3
+decomp=strips case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=4.62380682 t_comp=0.002037966 t_comm=4.622083441
+N=512 placement=slot P=5 mode=blocks run=1
+decomp=blocks case=2 P=5 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=4.816790718 t_comp=0.002040605 t_comm=4.814972966
+N=512 placement=slot P=5 mode=blocks run=2
+FAILED: exit=137

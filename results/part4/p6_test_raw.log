@@ -1,0 +1,5 @@
+N=512 placement=slot P=6 mode=strips run=1
+ssh: connect to host 100.100.103.111 port 22: Connection timed out
+EXIT=124
+N=512 placement=slot P=6 mode=blocks run=1
+EXIT=124 (no output after >60 s; killed manually, Theresa unreachable)

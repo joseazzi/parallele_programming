@@ -1,0 +1,52 @@
+N=512 placement=slot P=1 mode=strips run=1
+decomp=strips case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.103899708 t_comp=0.103823679 t_comm=3.49969999999e-05
+N=512 placement=slot P=1 mode=strips run=2
+decomp=strips case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.101691275 t_comp=0.101622522 t_comm=2.75380000001e-05
+N=512 placement=slot P=1 mode=strips run=3
+decomp=strips case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.100242147 t_comp=0.100175556 t_comm=2.708e-05
+N=512 placement=slot P=1 mode=blocks run=1
+decomp=blocks case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.101507772 t_comp=0.101429097 t_comm=3.72429999999e-05
+N=512 placement=slot P=1 mode=blocks run=2
+decomp=blocks case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.101878244 t_comp=0.101800537 t_comm=3.73390000006e-05
+N=512 placement=slot P=1 mode=blocks run=3
+decomp=blocks case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.103211333 t_comp=0.103134864 t_comm=3.51450000013e-05
+N=512 placement=slot P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.065414165 t_comp=0.059602329 t_comm=0.006188118
+N=512 placement=slot P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.063153501 t_comp=0.058075424 t_comm=0.005337006
+N=512 placement=slot P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.063735103 t_comp=0.058527602 t_comm=0.005332542
+N=512 placement=slot P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.060125538 t_comp=0.055175387 t_comm=0.005211631
+N=512 placement=slot P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.057987755 t_comp=0.053155373 t_comm=0.004986404
+N=512 placement=slot P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.058798124 t_comp=0.053942496 t_comm=0.004917019
+N=512 placement=slot P=3 mode=strips run=1
+decomp=strips case=2 P=3 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=49.02525282 t_comp=0.101955322 t_comm=48.975540825
+N=512 placement=slot P=3 mode=strips run=2
+decomp=strips case=2 P=3 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=50.097506048 t_comp=0.099180007 t_comm=50.059936147
+N=512 placement=slot P=3 mode=strips run=3
+decomp=strips case=2 P=3 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=49.962512099 t_comp=0.111705812 t_comm=49.918210897
+N=512 placement=slot P=3 mode=blocks run=1
+decomp=blocks case=2 P=3 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=46.675068037 t_comp=0.103763123 t_comm=46.622740041
+N=512 placement=slot P=3 mode=blocks run=2
+decomp=blocks case=2 P=3 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=49.099222413 t_comp=0.149839433 t_comm=49.053491336
+N=512 placement=slot P=3 mode=blocks run=3
+decomp=blocks case=2 P=3 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=48.282870246 t_comp=0.181208011 t_comm=48.232623773
+N=512 placement=slot P=4 mode=strips run=1
+[heat-jose:25643] plm:rsh: Warning: setpgid(25647,25647) failed in parent with errno=Permission denied(13)
+decomp=strips case=2 P=4 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=46.289621937 t_comp=0.096756411 t_comm=46.244648171
+N=512 placement=slot P=4 mode=strips run=2
+decomp=strips case=2 P=4 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=47.590221627 t_comp=0.105332244 t_comm=47.558965015
+N=512 placement=slot P=4 mode=strips run=3
+decomp=strips case=2 P=4 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=46.578836921 t_comp=0.121622233 t_comm=46.548196261
+N=512 placement=slot P=4 mode=blocks run=1
+decomp=blocks case=2 P=4 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=51.649087477 t_comp=0.138668701 t_comm=51.618046901
+N=512 placement=slot P=4 mode=blocks run=2
+decomp=blocks case=2 P=4 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=48.860917774 t_comp=0.156857822 t_comm=48.831016696
+N=512 placement=slot P=4 mode=blocks run=3
+decomp=blocks case=2 P=4 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=47.11204341 t_comp=0.145719373 t_comm=47.08155101
+N=512 placement=slot P=5 mode=strips run=1
+decomp=strips case=2 P=5 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=84.542459403 t_comp=0.161833296 t_comm=84.466988807
+N=512 placement=slot P=5 mode=strips run=2

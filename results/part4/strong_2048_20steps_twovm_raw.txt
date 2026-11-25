@@ -1,0 +1,26 @@
+N=2048 placement=slot P=1 mode=strips run=1
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.058184958 t_comp=0.058152459 t_comm=2.2372e-05
+N=2048 placement=slot P=1 mode=strips run=2
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.058429252 t_comp=0.058408545 t_comm=1.0289e-05
+N=2048 placement=slot P=1 mode=strips run=3
+decomp=strips case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.058158542 t_comp=0.058138624 t_comm=9.66700000001e-06
+N=2048 placement=slot P=1 mode=blocks run=1
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.059803972 t_comp=0.059777139 t_comm=1.6501e-05
+N=2048 placement=slot P=1 mode=blocks run=2
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.058870465 t_comp=0.058841671 t_comm=1.875e-05
+N=2048 placement=slot P=1 mode=blocks run=3
+decomp=blocks case=2 P=1 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.146796742 t_comp=0.146767952 t_comm=1.8918e-05
+N=2048 placement=slot P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.03270755 t_comp=0.031787251 t_comm=0.000974589
+N=2048 placement=slot P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.032855384 t_comp=0.032121336 t_comm=0.000927883
+N=2048 placement=slot P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.033015136 t_comp=0.032118043 t_comm=0.000937383
+N=2048 placement=slot P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.035337904 t_comp=0.034220107 t_comm=0.001628559
+N=2048 placement=slot P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.035381988 t_comp=0.034274938 t_comm=0.002718856
+N=2048 placement=slot P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=2048 steps=20 r=0.2 T=9.53674316406e-07 t_total=0.032915218 t_comp=0.032102295 t_comm=0.000953175
+N=2048 placement=slot P=3 mode=strips run=1
+FAILED: exit=124

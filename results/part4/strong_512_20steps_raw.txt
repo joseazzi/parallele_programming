@@ -1,0 +1,110 @@
+N=512 placement=slot P=1 mode=strips run=1
+decomp=strips case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.003474477 t_comp=0.003468517 t_comm=4.5e-06
+N=512 placement=slot P=1 mode=strips run=2
+decomp=strips case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.003735482 t_comp=0.003732481 t_comm=1.286e-06
+N=512 placement=slot P=1 mode=strips run=3
+decomp=strips case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.004016403 t_comp=0.004013446 t_comm=1.252e-06
+N=512 placement=slot P=1 mode=blocks run=1
+decomp=blocks case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.004015528 t_comp=0.004011986 t_comm=1.918e-06
+N=512 placement=slot P=1 mode=blocks run=2
+decomp=blocks case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.003623397 t_comp=0.003620187 t_comm=1.753e-06
+N=512 placement=slot P=1 mode=blocks run=3
+decomp=blocks case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.004069321 t_comp=0.004065695 t_comm=2.001e-06
+N=512 placement=slot P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.00211162 t_comp=0.001872281 t_comm=0.000244298
+N=512 placement=slot P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.00208987 t_comp=0.001832405 t_comm=0.000259592
+N=512 placement=slot P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.002027952 t_comp=0.001823948 t_comm=0.000224254
+N=512 placement=slot P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.002010077 t_comp=0.001805864 t_comm=0.000208918
+N=512 placement=slot P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.002007035 t_comp=0.001818784 t_comm=0.000190212
+N=512 placement=slot P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.002106328 t_comp=0.001900283 t_comm=0.000208752
+N=512 placement=slot P=3 mode=strips run=1
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.973462389 t_comp=0.003943324 t_comm=1.971383021
+N=512 placement=slot P=3 mode=strips run=2
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.965971043 t_comp=0.003295638 t_comm=1.963851883
+N=512 placement=slot P=3 mode=strips run=3
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.937720719 t_comp=0.003178164 t_comm=1.935443763
+N=512 placement=slot P=3 mode=blocks run=1
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.974163821 t_comp=0.00307539 t_comm=1.97208983
+N=512 placement=slot P=3 mode=blocks run=2
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.069021146 t_comp=0.00311188 t_comm=2.067108488
+N=512 placement=slot P=3 mode=blocks run=3
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.953344214 t_comp=0.002762678 t_comm=1.951380804
+N=512 placement=slot P=4 mode=strips run=1
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.102588225 t_comp=0.002274585 t_comm=2.101139699
+N=512 placement=slot P=4 mode=strips run=2
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.050562532 t_comp=0.00236864 t_comm=2.049485221
+N=512 placement=slot P=4 mode=strips run=3
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.979265358 t_comp=0.00211388 t_comm=1.977735119
+N=512 placement=slot P=4 mode=blocks run=1
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.92523125 t_comp=0.003467937 t_comm=1.92421765
+N=512 placement=slot P=4 mode=blocks run=2
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.793769236 t_comp=0.002701187 t_comm=1.792569173
+N=512 placement=slot P=4 mode=blocks run=3
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.070134494 t_comp=0.002889939 t_comm=2.069123514
+N=512 placement=slot P=5 mode=strips run=1
+mpirun: Forwarding signal 18 to job
+------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    heat-theresa
+  Remote host:   heat-jose
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
+FAILED: exit=124
+N=512 placement=node P=1 mode=strips run=1
+decomp=strips case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.00346404 t_comp=0.003455457 t_comm=7.041e-06
+N=512 placement=node P=1 mode=strips run=2
+decomp=strips case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.003496583 t_comp=0.003493793 t_comm=1.204e-06
+N=512 placement=node P=1 mode=strips run=3
+decomp=strips case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.003592836 t_comp=0.003590044 t_comm=1.376e-06
+N=512 placement=node P=1 mode=blocks run=1
+decomp=blocks case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.003756964 t_comp=0.003753671 t_comm=1.583e-06
+N=512 placement=node P=1 mode=blocks run=2
+decomp=blocks case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.004010887 t_comp=0.004007386 t_comm=1.916e-06
+N=512 placement=node P=1 mode=blocks run=3
+decomp=blocks case=2 P=1 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=0.003891592 t_comp=0.003888343 t_comm=1.668e-06
+N=512 placement=node P=2 mode=strips run=1
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.003539143 t_comp=0.00567966 t_comm=2.000539653
+N=512 placement=node P=2 mode=strips run=2
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.80345079 t_comp=0.004436931 t_comm=1.800430219
+N=512 placement=node P=2 mode=strips run=3
+decomp=strips case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.768366259 t_comp=0.005746209 t_comm=1.765373147
+N=512 placement=node P=2 mode=blocks run=1
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.970491235 t_comp=0.004822671 t_comm=1.967583207
+N=512 placement=node P=2 mode=blocks run=2
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.717997225 t_comp=0.007617825 t_comm=1.714996737
+N=512 placement=node P=2 mode=blocks run=3
+decomp=blocks case=2 P=2 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.813582646 t_comp=0.005670984 t_comm=1.810585781
+N=512 placement=node P=3 mode=strips run=1
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.000140224 t_comp=0.003273269 t_comm=1.998799942
+N=512 placement=node P=3 mode=strips run=2
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.958959198 t_comp=0.004297894 t_comm=1.957084113
+N=512 placement=node P=3 mode=strips run=3
+decomp=strips case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.935351388 t_comp=0.004556791 t_comm=1.933357882
+N=512 placement=node P=3 mode=blocks run=1
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.87931495 t_comp=0.002757803 t_comm=1.876523637
+N=512 placement=node P=3 mode=blocks run=2
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.87914543 t_comp=0.002995499 t_comm=1.876138514
+N=512 placement=node P=3 mode=blocks run=3
+decomp=blocks case=2 P=3 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.950127238 t_comp=0.003240676 t_comm=1.94687664
+N=512 placement=node P=4 mode=strips run=1
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.503125136 t_comp=0.00278718 t_comm=2.502005233
+N=512 placement=node P=4 mode=strips run=2
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=2.051697281 t_comp=0.002797435 t_comm=2.050095409
+N=512 placement=node P=4 mode=strips run=3
+decomp=strips case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.928983151 t_comp=0.003377667 t_comm=1.927306444
+N=512 placement=node P=4 mode=blocks run=1
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.817452808 t_comp=0.002698056 t_comm=1.816355656
+N=512 placement=node P=4 mode=blocks run=2
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.797896804 t_comp=0.002859847 t_comm=1.796436309
+N=512 placement=node P=4 mode=blocks run=3
+decomp=blocks case=2 P=4 N=512 steps=20 r=0.2 T=1.52587890625e-05 t_total=1.757199191 t_comp=0.002449596 t_comm=1.75589399
+N=512 placement=slot P=5 mode=strips run=1
+FAILED: exit=137

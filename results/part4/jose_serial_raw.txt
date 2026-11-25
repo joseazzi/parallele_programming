@@ -1,0 +1,30 @@
+N=512 run=1
+decomp=serial case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.102845011 t_comp=0.102845011 t_comm=0
+N=512 run=2
+decomp=serial case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.081704521 t_comp=0.081704521 t_comm=0
+N=512 run=3
+decomp=serial case=2 P=1 N=512 steps=500 r=0.2 T=0.000381469726562 t_total=0.081945801 t_comp=0.081945801 t_comm=0
+N=1024 run=1
+decomp=serial case=2 P=1 N=1024 steps=500 r=0.2 T=9.53674316406e-05 t_total=0.340790021 t_comp=0.340790021 t_comm=0
+N=1024 run=2
+decomp=serial case=2 P=1 N=1024 steps=500 r=0.2 T=9.53674316406e-05 t_total=0.340492038 t_comp=0.340492038 t_comm=0
+N=1024 run=3
+decomp=serial case=2 P=1 N=1024 steps=500 r=0.2 T=9.53674316406e-05 t_total=0.345455583 t_comp=0.345455583 t_comm=0
+N=2048 run=1
+decomp=serial case=2 P=1 N=2048 steps=500 r=0.2 T=2.38418579102e-05 t_total=1.433694058 t_comp=1.433694058 t_comm=0
+N=2048 run=2
+decomp=serial case=2 P=1 N=2048 steps=500 r=0.2 T=2.38418579102e-05 t_total=1.432437265 t_comp=1.432437265 t_comm=0
+N=2048 run=3
+decomp=serial case=2 P=1 N=2048 steps=500 r=0.2 T=2.38418579102e-05 t_total=1.43161841 t_comp=1.43161841 t_comm=0
+N=4096 run=1
+decomp=serial case=2 P=1 N=4096 steps=500 r=0.2 T=5.96046447754e-06 t_total=6.641770263 t_comp=6.641770263 t_comm=0
+N=4096 run=2
+decomp=serial case=2 P=1 N=4096 steps=500 r=0.2 T=5.96046447754e-06 t_total=6.652135497 t_comp=6.652135497 t_comm=0
+N=4096 run=3
+decomp=serial case=2 P=1 N=4096 steps=500 r=0.2 T=5.96046447754e-06 t_total=6.653190351 t_comp=6.653190351 t_comm=0
+N=8192 run=1
+decomp=serial case=2 P=1 N=8192 steps=500 r=0.2 T=1.49011611938e-06 t_total=26.328732167 t_comp=26.328732167 t_comm=0
+N=8192 run=2
+decomp=serial case=2 P=1 N=8192 steps=500 r=0.2 T=1.49011611938e-06 t_total=26.509563423 t_comp=26.509563423 t_comm=0
+N=8192 run=3
+decomp=serial case=2 P=1 N=8192 steps=500 r=0.2 T=1.49011611938e-06 t_total=26.591027846 t_comp=26.591027846 t_comm=0
