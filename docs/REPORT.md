@@ -408,9 +408,14 @@ Each of us provided and maintained one cluster node:
 - **Theresa Kozah:** heat-theresa (VirtualBox on Windows).
 
 The author names in the Git history show whose machine or account
-was used to commit, not who did the work. For example, most commits
-were pushed from Jose's VM, and the background-notes solutions from
-Theresa's.
+was used to commit, not who did the work. For example:
+
+- Most commits were pushed from Jose's VM, and the background-notes
+  solutions from Theresa's.
+- Dia pushed the Dia–Theresa ping-pong results from her own VM.
+- Measurements made on Dia's VM were committed from Jose's or
+  Theresa's accounts: the Dia-local ping-pong, the 16 MiB Dia–Theresa
+  benchmark, and the Part 4 serial baseline.
 
 **Use of LLMs:** ChatGPT and Claude Code were used throughout. The
 complete conversation logs are submitted separately, as required by
