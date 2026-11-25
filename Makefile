@@ -7,9 +7,12 @@ MPIFLAGS = $(CXXFLAGS)
 
 .PHONY: all clean
 
-all: heat_serial heat_strips heat_blocks pingpong hello_mpi
+all: heat_serial heat_unstable heat_strips heat_blocks pingpong hello_mpi
 
 heat_serial: src/heat_serial.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
+
+heat_unstable: src/heat_unstable.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 heat_strips: src/parallel/heat_strips.cpp
@@ -25,4 +28,4 @@ hello_mpi: hello_mpi.cpp
 	$(MPICXX) $(MPIFLAGS) $< -o $@
 
 clean:
-	rm -f heat_serial heat_strips heat_blocks pingpong hello_mpi
+	rm -f heat_serial heat_unstable heat_strips heat_blocks pingpong hello_mpi
