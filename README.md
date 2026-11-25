@@ -276,6 +276,23 @@ Both parallel implementations require numerical
 correctness validation against the serial solver
 before their final performance results are accepted.
 
+## Live demo
+
+Run on heat-jose only (mpirun starts the ranks on Dia's and Theresa's
+VMs over SSH):
+
+    bash scripts/demo.sh                # Case 1 and 2, N=48, P=3 (one rank per VM), strips
+    bash scripts/demo.sh 64 5 blocks    # change N, P and decomposition on request
+    CASES="2" bash scripts/demo.sh      # one case only
+
+For each case it shows where the ranks run, runs the solver across the
+VMs, checks the output against serial with cmp, and prints a heat map
+in the terminal (PNG in results/demo/). Each step across VMs costs
+about 0.1 s, so one case takes about 40-70 s with the defaults.
+
+Backup video of the heat spreading: results/demo/heat_demo.mp4
+(made with scripts/demo_animation.py).
+
 ## Correctness check
 
 Runs serial, strips and blocks for several N and P and compares the
