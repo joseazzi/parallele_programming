@@ -494,6 +494,8 @@ The purpose of the convergence study is to verify that the numerical error decre
 
 The study uses Case V and compares numerical results against the analytical solution.
 
+Run parameters (identified later by reproducing the CSV bit for bit): r = 0.2, final time T = 0.01, i.e. 0.05 N^2 time steps. The background Task 7.2 study (N = 16..256, T = 0.05) is in `docs/background/chapter7.md`.
+
 ### 8.2 Recorded convergence results
 
 The project contains the numerical results in:
